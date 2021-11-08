@@ -13,6 +13,15 @@
 		DA71CF9D27392FC0008C6E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA71CF9B27392FC0008C6E02 /* Main.storyboard */; };
 		DA71CF9F27392FC1008C6E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA71CF9E27392FC1008C6E02 /* Assets.xcassets */; };
 		DA71CFA227392FC1008C6E02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA71CFA027392FC1008C6E02 /* LaunchScreen.storyboard */; };
+		DA71CFAF27393329008C6E02 /* FriendsResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFAE27393329008C6E02 /* FriendsResponseModel.swift */; };
+		DA71CFB1273933AE008C6E02 /* UrlManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFB0273933AE008C6E02 /* UrlManager.swift */; };
+		DA71CFB827393556008C6E02 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFB627393556008C6E02 /* FriendCell.swift */; };
+		DA71CFB927393556008C6E02 /* FriendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DA71CFB727393556008C6E02 /* FriendCell.xib */; };
+		DA71CFBC27393832008C6E02 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFBB27393832008C6E02 /* UIImageViewExtension.swift */; };
+		DA71CFBF27393A4D008C6E02 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFBE27393A4D008C6E02 /* Networking.swift */; };
+		DA71CFC127393AF5008C6E02 /* FriendsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC027393AF5008C6E02 /* FriendsAPIService.swift */; };
+		DA71CFC327393ECE008C6E02 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */; };
+		DA71CFC527393F78008C6E02 /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC427393F78008C6E02 /* FriendDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +33,15 @@
 		DA71CF9E27392FC1008C6E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA71CFA127392FC1008C6E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA71CFA327392FC1008C6E02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA71CFAE27393329008C6E02 /* FriendsResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsResponseModel.swift; sourceTree = "<group>"; };
+		DA71CFB0273933AE008C6E02 /* UrlManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlManager.swift; sourceTree = "<group>"; };
+		DA71CFB627393556008C6E02 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		DA71CFB727393556008C6E02 /* FriendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendCell.xib; sourceTree = "<group>"; };
+		DA71CFBB27393832008C6E02 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		DA71CFBE27393A4D008C6E02 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		DA71CFC027393AF5008C6E02 /* FriendsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIService.swift; sourceTree = "<group>"; };
+		DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
+		DA71CFC427393F78008C6E02 /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +74,80 @@
 		DA71CF9427392FC0008C6E02 /* Friends */ = {
 			isa = PBXGroup;
 			children = (
+				DA71CFBD27393A3A008C6E02 /* Network */,
+				DA71CFBA27393817008C6E02 /* Extension */,
+				DA71CFAD27393208008C6E02 /* Models */,
+				DA71CFAC273931F6008C6E02 /* Constants */,
+				DA71CFAB273931EC008C6E02 /* Cells */,
+				DA71CFAA273931DD008C6E02 /* VMs */,
+				DA71CFA9273931D1008C6E02 /* VCs */,
 				DA71CF9527392FC0008C6E02 /* AppDelegate.swift */,
 				DA71CF9727392FC0008C6E02 /* SceneDelegate.swift */,
-				DA71CF9927392FC0008C6E02 /* ViewController.swift */,
 				DA71CF9B27392FC0008C6E02 /* Main.storyboard */,
 				DA71CF9E27392FC1008C6E02 /* Assets.xcassets */,
 				DA71CFA027392FC1008C6E02 /* LaunchScreen.storyboard */,
 				DA71CFA327392FC1008C6E02 /* Info.plist */,
 			);
 			path = Friends;
+			sourceTree = "<group>";
+		};
+		DA71CFA9273931D1008C6E02 /* VCs */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CF9927392FC0008C6E02 /* ViewController.swift */,
+			);
+			path = VCs;
+			sourceTree = "<group>";
+		};
+		DA71CFAA273931DD008C6E02 /* VMs */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */,
+				DA71CFC427393F78008C6E02 /* FriendDataSource.swift */,
+			);
+			path = VMs;
+			sourceTree = "<group>";
+		};
+		DA71CFAB273931EC008C6E02 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFB627393556008C6E02 /* FriendCell.swift */,
+				DA71CFB727393556008C6E02 /* FriendCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DA71CFAC273931F6008C6E02 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFB0273933AE008C6E02 /* UrlManager.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		DA71CFAD27393208008C6E02 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFAE27393329008C6E02 /* FriendsResponseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DA71CFBA27393817008C6E02 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFBB27393832008C6E02 /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		DA71CFBD27393A3A008C6E02 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DA71CFBE27393A4D008C6E02 /* Networking.swift */,
+				DA71CFC027393AF5008C6E02 /* FriendsAPIService.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +211,7 @@
 				DA71CFA227392FC1008C6E02 /* LaunchScreen.storyboard in Resources */,
 				DA71CF9F27392FC1008C6E02 /* Assets.xcassets in Resources */,
 				DA71CF9D27392FC0008C6E02 /* Main.storyboard in Resources */,
+				DA71CFB927393556008C6E02 /* FriendCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +222,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA71CFAF27393329008C6E02 /* FriendsResponseModel.swift in Sources */,
+				DA71CFC527393F78008C6E02 /* FriendDataSource.swift in Sources */,
+				DA71CFBC27393832008C6E02 /* UIImageViewExtension.swift in Sources */,
+				DA71CFB827393556008C6E02 /* FriendCell.swift in Sources */,
+				DA71CFBF27393A4D008C6E02 /* Networking.swift in Sources */,
 				DA71CF9A27392FC0008C6E02 /* ViewController.swift in Sources */,
+				DA71CFC127393AF5008C6E02 /* FriendsAPIService.swift in Sources */,
+				DA71CFC327393ECE008C6E02 /* FriendsViewModel.swift in Sources */,
 				DA71CF9627392FC0008C6E02 /* AppDelegate.swift in Sources */,
+				DA71CFB1273933AE008C6E02 /* UrlManager.swift in Sources */,
 				DA71CF9827392FC0008C6E02 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
