@@ -22,17 +22,8 @@ extension UIImageView {
     
 
     func setImage(withImageId imageId: String, placeholderImage: UIImage, size: ImageSize = .original) {
-        
-        let baseURL = Domain.assest
-        
-        var urlString: String!
-        
-        if size == .thumbnail {
-            urlString = String(format: "%@thumbnail_%@", baseURL, imageId)
-        } else {
-            urlString = String(format: "%@%@", baseURL, imageId)
-        }
-        cacheImage(urlString: urlString, placeholder: placeholderImage)
+         
+        cacheImage(urlString: imageId, placeholder: placeholderImage)
        
     }
     

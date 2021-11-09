@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA3D8D7D273A59F700175A2F /* DetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA3D8D7C273A59F700175A2F /* DetailsVc.swift */; };
 		DA71CF9627392FC0008C6E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CF9527392FC0008C6E02 /* AppDelegate.swift */; };
 		DA71CF9827392FC0008C6E02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CF9727392FC0008C6E02 /* SceneDelegate.swift */; };
 		DA71CF9A27392FC0008C6E02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CF9927392FC0008C6E02 /* ViewController.swift */; };
@@ -21,10 +22,10 @@
 		DA71CFBF27393A4D008C6E02 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFBE27393A4D008C6E02 /* Networking.swift */; };
 		DA71CFC127393AF5008C6E02 /* FriendsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC027393AF5008C6E02 /* FriendsAPIService.swift */; };
 		DA71CFC327393ECE008C6E02 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */; };
-		DA71CFC527393F78008C6E02 /* FriendDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA71CFC427393F78008C6E02 /* FriendDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA3D8D7C273A59F700175A2F /* DetailsVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVc.swift; sourceTree = "<group>"; };
 		DA71CF9227392FC0008C6E02 /* Friends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Friends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA71CF9527392FC0008C6E02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA71CF9727392FC0008C6E02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,7 +42,6 @@
 		DA71CFBE27393A4D008C6E02 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
 		DA71CFC027393AF5008C6E02 /* FriendsAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsAPIService.swift; sourceTree = "<group>"; };
 		DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
-		DA71CFC427393F78008C6E02 /* FriendDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				DA71CF9927392FC0008C6E02 /* ViewController.swift */,
+				DA3D8D7C273A59F700175A2F /* DetailsVc.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -103,7 +104,6 @@
 			isa = PBXGroup;
 			children = (
 				DA71CFC227393ECE008C6E02 /* FriendsViewModel.swift */,
-				DA71CFC427393F78008C6E02 /* FriendDataSource.swift */,
 			);
 			path = VMs;
 			sourceTree = "<group>";
@@ -223,13 +223,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA71CFAF27393329008C6E02 /* FriendsResponseModel.swift in Sources */,
-				DA71CFC527393F78008C6E02 /* FriendDataSource.swift in Sources */,
 				DA71CFBC27393832008C6E02 /* UIImageViewExtension.swift in Sources */,
 				DA71CFB827393556008C6E02 /* FriendCell.swift in Sources */,
 				DA71CFBF27393A4D008C6E02 /* Networking.swift in Sources */,
 				DA71CF9A27392FC0008C6E02 /* ViewController.swift in Sources */,
 				DA71CFC127393AF5008C6E02 /* FriendsAPIService.swift in Sources */,
 				DA71CFC327393ECE008C6E02 /* FriendsViewModel.swift in Sources */,
+				DA3D8D7D273A59F700175A2F /* DetailsVc.swift in Sources */,
 				DA71CF9627392FC0008C6E02 /* AppDelegate.swift in Sources */,
 				DA71CFB1273933AE008C6E02 /* UrlManager.swift in Sources */,
 				DA71CF9827392FC0008C6E02 /* SceneDelegate.swift in Sources */,
@@ -390,6 +390,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,7 +400,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -419,6 +420,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,7 +430,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

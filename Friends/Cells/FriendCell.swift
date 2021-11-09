@@ -20,20 +20,19 @@ class FriendCell: UICollectionViewCell {
     }
 
     
-    
     var friend: Friend? {
         
         didSet {
             
             if let friend = friend {
                 
-                self.lblFullName.text = "\(String(describing: friend.name?.first)) \(String(describing: friend.name?.last))"
+                self.lblFullName.text = "\(friend.name?.first ?? "") \(friend.name?.last ?? "")"
                 
                 self.lblCountry.text = friend.location?.country
                 
-                self.imgView.setImage(withImageId: friend.picture?.medium ?? "",  placeholderImage: #imageLiteral(resourceName: "placeholder"), size: .original)
+                self.imgView.setImage(withImageId: friend.picture?.large! ?? "",  placeholderImage: #imageLiteral(resourceName: "placeholder"), size: .original)
                 
-                self.imgView.contentMode = .scaleToFill
+                self.imgView.contentMode = .scaleAspectFit
             }
         }
     }

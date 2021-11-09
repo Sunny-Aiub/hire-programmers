@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var myCollectionView: UICollectionView!
     
     let viewModel = FriendsViewModel()
@@ -19,11 +19,11 @@ class ViewController: UIViewController {
         prepareUI()
         prepareCollectionView()
         fetchMovieList()
-        
     }
-
+    
     
     func prepareUI()  {
+        prepareViewModelObserver()
         
     }
     
@@ -65,7 +65,7 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath) as? FriendCell else{
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendCell", for: indexPath) as? FriendCell else{
             fatalError("Cell not found")
         }
         
@@ -75,6 +75,25 @@ extension ViewController : UICollectionViewDelegate, UICollectionViewDataSource{
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let data = viewModel.friends![indexPath.row]
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailsVc") as! DetailsVc
+        vc.friendData = data
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
     
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:
+                        UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let width = self.myCollectionView.frame.width / 3 - 16
+        let height = 200.0
+        
+        return CGSize(width: width, height: height)
+        
+    }
 }
